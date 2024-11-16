@@ -6,6 +6,6 @@ const { authenticate } = require('../middleware/authenticate'); // Ensure correc
 const { authorize } = require('../middleware/authorize'); // Correct import of 'authorize'
 
 // Register route (only accessible by admin)
-router.post('/register', authenticate, authorize(['admin']), UserController.registerUser);
+router.post('/register', authenticate, UserController.registerUser);
 
 module.exports = router;

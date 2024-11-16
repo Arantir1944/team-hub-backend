@@ -5,6 +5,9 @@ const sequelize = require('./database'); // Assuming you have this set up for yo
 const userRoutes = require('./routes/UserRoutes'); // Import your user routes here
 const { authenticate } = require('./middleware/authenticate'); // If using authentication middleware
 const app = express();
+const cors = require('cors');
+app.use(cors()); // Allow all origins, adjust if necessary for security
+
 
 // Set up view engine (if you're using views)
 app.set('views', path.join(__dirname, 'views')); // Uncomment if using views
